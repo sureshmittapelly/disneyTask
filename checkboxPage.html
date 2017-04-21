@@ -1,0 +1,15 @@
+	<h1>Create an Account</h1>
+	<div class="mainForm">
+		<form>
+		  <div class="wdpr-checbox-form" ng-repeat="terms in data" >
+			<label class="checkbox checkboxLabel">{{terms.mainText}} 
+				<a href="{{terms.url}}" target="_blank">{{terms.linkText}} </a>
+				<input type="checkbox" ng-checked="{{terms.checked}}" ng-disabled="{{terms.disabled}}"/>
+				<div class="checkboxView"></div>
+			</label>
+		  </div>
+		  <div class="errorMsg">{{errorMsg}}</div>
+			<button type="submit" class="update-success" ng-click="submitData()">Submit</button>
+		</form>
+	</div>
+

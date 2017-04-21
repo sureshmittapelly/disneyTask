@@ -1,0 +1,242 @@
+body {
+ font-family:Trebuchet ms;
+}
+#wrapper{
+	border:1px solid #d0d7de;
+	width:410px;
+	margin: 100px auto;
+	}
+.landing-items-list{
+	list-style-type:none; 
+	margin:0; 
+	padding:0;
+	}
+.landing-items-list li{ 
+	cursor:pointer; 
+	background:#bbe0f3; 
+	
+	margin:0; 
+	border-bottom:1px solid #fff;
+	}
+.landing-items-list li span{ display:block ;padding:5px 10px; }
+#wrapper h1{ 
+    padding: 20px 0;
+    text-align: center;
+    font-size: 24px;
+    background: #ecf1f4;
+    margin: 0;
+	}
+
+.form-radio-delivery{ 
+	padding:25px 10px; 
+	border-bottom:1px solid #ecf1f4
+	}
+.delivery-label-text{
+    color: #253b56;
+    clear: both;
+    display: block;
+    line-height: 25px;
+    padding: 5px 35px;
+    font-size: 17px;}
+.delivery-label-text span.delivery-label-subText{ 
+	display:block; 
+	font-size:14px; 
+	font-weight:normal;
+	}
+.delivery-label-text span{ 
+	font-weight:bold; 
+	font-size:13px;
+	}
+
+
+/* Custom Radio Buttons */
+/* ------------------------------------------ */
+
+/* Radio button */
+.form-radio-delivery .radioButton {
+    position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+.form-radio-delivery input[type="radio"] + label {
+    font-size: 21px;
+    color: #253b56;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.form-radio-delivery input[type="radio"] + label span.radio{
+    display:inline-block;
+    width:20px;
+    height:20px;
+    margin:-1px 11px 0 0;
+    vertical-align:middle;
+    cursor:pointer;
+    -moz-border-radius:  50%;
+    border-radius:  50%;
+}
+
+.form-radio-delivery input[type="radio"] + label span.radio {
+   background-color: #fff;
+    border: 1px solid #8294aa;
+}
+
+/* Checked state for radio */
+.form-radio-delivery input[type="radio"]:checked + label span.radio{
+    background-color: #fff; /* have to be of the same color */
+    border: 6px solid #58831b; /* have to be of the same color */
+	width:10px;
+	height:10px;
+}
+.form-radio-delivery .shipHomeOptions{ 
+	padding:5px 32px;
+	}
+.form-radio-delivery .footerText{ 
+	padding:5px 32px;
+	font-size: 13px; 
+	font-weight: bold; 
+	color: #253b56;
+	}
+.shipHomeOptions .shipHome-delivery,
+.shipHomeOptions span.shipHome-delivery{
+	padding-top:10px;
+	}
+.shipHomeOptions  input[type="radio"] + label {
+	font-size:14px; 
+	font-weight:normal;
+	}
+.shipHomeOptions input[type="radio"] + label span.radio {
+	width:15px;
+    height:15px;
+}
+.shipHomeOptions input[type="radio"]:checked + label span.radio{
+	border: 4px solid #58831b; /* have to be of the same color */
+	width:9px;
+	height:9px;
+	}
+.shipHomeOptions label span.deliveryCost{
+	font-weight:bold; 
+	font-size:17px; 
+	float:right;
+	}
+.form-radio-delivery.disabled{ 
+	background:#ecf1f4;
+	}
+.form-radio-delivery.disabled input[type="radio"] + label{
+	color:#a1afc0;
+	}
+.form-radio-delivery input[type="radio"] + label span.radio{ 
+	background-color: #ecf1f4;
+	}
+.form-radio-delivery.disabled  .delivery-label-text{
+	color:#8294aa;
+	}
+.form-radio-delivery.disabled  .delivery-label-text >span{
+	color:#5b6c7d;
+	}
+.update-success{    
+	text-align: center;
+    width: 100%;
+    padding: 15px 0;
+    background: #1994d7;
+    color: #fff;
+	cursor: pointer;
+    border: none;
+    font-size: 20px;}
+.errorMsg{ 
+	color:red; 
+	font-size:12px; 
+	text-align:center;
+	}
+
+/* Custom Check Boxes */
+/* ------------------------------------------ */
+.wdpr-checbox-form{
+	padding:10px 25px;
+	}
+.wdpr-checbox-list{ 
+	list-style-type:none; 
+	margin:0px; 
+	padding:0;
+	}
+.wdpr-checbox-list input[type="checkbox"]{}
+.control-group {
+  display: inline-block;
+  vertical-align: top;
+  background: #fff;
+  text-align: left;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  padding: 30px;
+  width: 200px;
+  height: 210px;
+  margin: 10px;
+}
+.checkbox {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 15px;
+ 
+}
+.checkbox a{
+	color:#1994d7;
+	font-weight:bold;
+	text-decoration:none;
+}
+.checkbox input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.checkboxView {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: #fff;
+  border:1px solid #d0d7de;
+  border-radius:4px;
+}
+.checkbox:hover input ~ .checkboxView,
+.checkbox input:focus ~ .checkboxView {
+  background: #fff;
+}
+.checkbox input:checked ~ .checkboxView {
+  background: #61941b;
+  border:1px solid #61941b;
+}
+.checkbox:hover input:not([disabled]):checked ~ .checkboxView,
+.checkbox input:checked:focus ~ .checkboxView {
+  background: #61941b;
+  border:1px solid #61941b;
+}
+.checkbox input:disabled ~ .checkboxView {
+	background: #ecf1f4;
+	opacity: 0.9;
+	border: 1px solid #d0d7de;
+	pointer-events: none;
+}
+.checkboxView:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+.checkbox input:checked ~ .checkboxView:after {
+  display: block;
+}
+.checkboxLabel .checkboxView:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  transform: rotate(38deg);
+}
+.checkboxLabel input:disabled ~ .checkboxView:after {
+  border-color: #7b7b7b;
+}

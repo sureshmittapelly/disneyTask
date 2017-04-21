@@ -1,0 +1,21 @@
+	<h1>Contact Information</h1>
+	<form>
+		<div class="mainForm">
+			<div ng-repeat="delivery in data" class="form-radio-delivery"  ng-class="{ 'disabled': delivery.disableType === true }" >
+				<input type="radio" name="type" value="{{delivery.deliveryType}}" ng-click="resetstype()" ng-model="$parent.activeOption"  
+				ng-disabled="{{delivery.disableType}}" id="{{delivery.id}}" class="radioButton">
+				<label for="{{delivery.id}}"><span class="radio"></span>{{delivery.deliveryType}}</label>
+				<div class="delivery-label-text">{{delivery.subText1}}
+					<span class="delivery-label-subText">{{delivery.subText2}}</span>
+					<span>{{delivery.subTitle}}</span>
+				</div>
+				<div ng-repeat="subDelivery in delivery.subDelivery" class="shipHomeOptions">
+					<input class="radioButton" id="{{subDelivery.id}}" type="radio" name="stype" value="{{subDelivery.deliveryType}}" ng-click="radioActions(delivery.deliveryType)" ng-model="$parent.$parent.selectedSubDelivery">
+					<label for="{{subDelivery.id}}"><span class="radio"></span>{{subDelivery.deliveryType}} <span class="deliveryCost">${{subDelivery.deliveryCost}}</span></label>
+				</div>
+				<div class="footerText">{{delivery.footerText}}</div>
+			</div>
+		</div>
+		<div class="errorMsg">{{errorMsg}}</div>
+		<button type="submit" class="btn update-success" ng-click="updateData()">Update</button>
+	</form>
